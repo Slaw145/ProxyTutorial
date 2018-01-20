@@ -13,14 +13,14 @@ namespace CartbankC
 
             if (cartbank.IfPinIsValid)
             {
-                Console.WriteLine("Wprowadzono poprawny pin, co chcesz zrobić?");
-                Console.WriteLine("Wypłać 4000zł z banku");
+                Console.WriteLine("The correct pin has been entered, what do you want to do?");
+                Console.WriteLine("Withdraw 4,000 USD from the bank");
                 cartbank.PayOutMoneyFromAccount(4000);
-                Console.WriteLine("na koncie zostało ci: " + cartbank.CheckStateAccount() + " zł");
+                Console.WriteLine("You have: " + cartbank.CheckStateAccount() + " USD left in your account");
             }
             else
             {
-                Console.WriteLine("Wprowadzono niepoprawny pin, spróbuj jescze raz");
+                Console.WriteLine("Incorrect pin entered, try again");
             }
 
             Console.ReadKey();
