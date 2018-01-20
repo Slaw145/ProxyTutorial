@@ -53,14 +53,14 @@ class CartBank implements IPayment {
      
         if (cartbank.IfPinIsValid)
         {
-        	System.out.println("Wprowadzono poprawny pin, co chcesz zrobiæ?");
-        	System.out.println("Wyp³aæ 4000z³ z banku");
+        	System.out.println("The correct pin has been entered, what do you want to do?");
+        	System.out.println("Withdraw 4,000 USD from the bank");
             cartbank.PayOutMoneyFromAccount(4000);
-            System.out.println("na koncie zosta³o ci: "+cartbank.CheckStateAccount()+" z³");
+            System.out.println("You have: "+cartbank.CheckStateAccount()+" USD left in your account");
         }
         else
         {
-        	System.out.print("Wprowadzono niepoprawny pin, spróbuj jescze raz");
+        	System.out.print("Incorrect pin entered, try again");
         }
         
         pin.close();
