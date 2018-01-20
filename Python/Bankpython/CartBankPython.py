@@ -64,12 +64,12 @@ def main():
     cartbank.getPIN(pin)
  
     if (cartbank.IfPinIsValid):
-        print("Wprowadzono poprawny pin, co chcesz zrobić?")
-        print("Wypłać 4000zł z banku")
+        print("The correct pin has been entered, what do you want to do?")
+        print("Withdraw 4,000 USD from the bank")
         cartbank.PayOutMoneyFromAccount(4000)
-        print("na koncie zostało ci: ",cartbank.CheckStateAccount()," zł")
+        print("You have: ",cartbank.CheckStateAccount()," USD left in your account")
     else:
-        print("Wprowadzono niepoprawny pin, spróbuj jescze raz")
+        print("Incorrect pin entered, try again")
 
 if __name__ == "__main__":
    main()
